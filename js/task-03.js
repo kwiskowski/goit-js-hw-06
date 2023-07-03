@@ -18,11 +18,11 @@ const galleryItems = images
     (image) => `<li class = "flex">
   <img src="${image.url}" 
   alt="${image.alt}"
-  width = "800"/></li>`
+  width = "400"/></li>`
   )
   .join("");
 
 const gallery = document.querySelector(".gallery");
 gallery.insertAdjacentHTML("beforeend", galleryItems);
 gallery.style.display = "flex";
-gallery.style.gap = "20px";
+gallery.style.gap = "10px";
