@@ -3,16 +3,12 @@ function getRandomHexColor() {
     .toString(16)
     .padStart(6, 0)}`;
 }
+const color = getRandomHexColor();
 
 const colorButton = document.querySelector(".change-color");
-
 colorButton.addEventListener("click", function onClick() {
-  document.body.style.backgroundColor = getRandomHexColor();
+  const color = getRandomHexColor();
+  document.body.style.backgroundColor = color;
   const backgroundColor = document.querySelector(".color");
-  let colorCatcher = getRandomHexColor();
-  backgroundColor.innerHTML = colorCatcher;
+  backgroundColor.textContent = color;
 });
-
-// proszę jeszcze wypisać kolor do html'a.
-// można zapisywać otrzymany kolor po pierwszym wywołaniu
-// do zmiennej i już korzystać ze zmiennej by nadać kolor dla body oraz wypisać go do html'a
